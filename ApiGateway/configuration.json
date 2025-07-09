@@ -1,0 +1,429 @@
+{
+    "Routes": [
+
+        //----Auth-------------------------------------------------------------------------------------------
+        {
+            "ReRoutesCaseSensitive": false,
+            "DownstreamPathTemplate": "/api/Auth/Login", //api url actual
+            "DownstreamScheme": "https",
+
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 7285
+                }
+            ],
+            "UpstreamPathTemplate": "/gateway/Auth/Login",
+            "UpstreamHttpMethod": [ "POST" ]
+        },
+        //--------
+        {
+            "ReRoutesCaseSensitive": false,
+            "DownstreamPathTemplate": "/api/User/Registration", //api url actual
+            "DownstreamScheme": "https",
+
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 7285
+                }
+            ],
+            "UpstreamPathTemplate": "/gateway/Auth/Registration",
+            "UpstreamHttpMethod": [ "POST" ]
+        },
+        {
+            "ReRoutesCaseSensitive": false,
+            "DownstreamPathTemplate": "/api/User/GetAllUsers", //api url actual
+            "DownstreamScheme": "https",
+
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 7285
+                }
+            ],
+            "UpstreamPathTemplate": "/gateway/Auth/GetAllUsers",
+            "UpstreamHttpMethod": [ "GET" ]
+        },
+        {
+            "ReRoutesCaseSensitive": false,
+            "DownstreamPathTemplate": "/api/User/GetUserById/{id}", //api url actual
+            "DownstreamScheme": "https",
+
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 7285
+                }
+            ],
+            "UpstreamPathTemplate": "/gateway/Auth/GetUserById/{id}",
+            "UpstreamHttpMethod": [ "GET" ]
+        },
+        {
+            "ReRoutesCaseSensitive": false,
+            "DownstreamPathTemplate": "/api/User/GetUserByUsername/{username}", //api url actual
+            "DownstreamScheme": "https",
+
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 7285
+                }
+            ],
+            "UpstreamPathTemplate": "/gateway/Auth/GetUserByUsername/{username}",
+            "UpstreamHttpMethod": [ "GET" ]
+        },
+        {
+            "ReRoutesCaseSensitive": false,
+            "DownstreamPathTemplate": "/api/User/UpdateUser/{id}", //api url actual
+            "DownstreamScheme": "https",
+
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 7285
+                }
+            ],
+            "UpstreamPathTemplate": "/gateway/Auth/UpdateUser/{id}",
+            "UpstreamHttpMethod": [ "PUT" ]
+        },
+        {
+            "ReRoutesCaseSensitive": false,
+            "DownstreamPathTemplate": "/api/User/DeleteUser/{id}", //api url actual
+            "DownstreamScheme": "https",
+
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 7285
+                }
+            ],
+            "UpstreamPathTemplate": "/gateway/Auth/DeleteUser/{id}",
+            "UpstreamHttpMethod": [ "DELETE" ]
+        },
+
+        //----Person-------------------------------------------------------------------------------------------
+        {
+            "ReRoutesCaseSensitive": false,
+            "DownstreamPathTemplate": "/api/Person/GetAllPersons", //api url actual
+            "DownstreamScheme": "https",
+
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 7216
+                }
+            ],
+            "UpstreamPathTemplate": "/gateway/Person/GetAllPersons",
+            "UpstreamHttpMethod": [ "GET" ]
+        },
+        {
+            "ReRoutesCaseSensitive": false,
+            "DownstreamPathTemplate": "/api/Person/GetPersonById/{Id}", //api url actual
+            "DownstreamScheme": "https",
+
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 7216
+                }
+            ],
+            "UpstreamPathTemplate": "/gateway/Person/GetPersonById/{Id}",
+            "UpstreamHttpMethod": [ "GET" ]
+        },
+        {
+            "ReRoutesCaseSensitive": false,
+            "DownstreamPathTemplate": "/api/Person/GetPersonByName/{Name}", //api url actual
+            "DownstreamScheme": "https",
+
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 7216
+                }
+            ],
+            "UpstreamPathTemplate": "/gateway/Person/GetPersonByName/{Name}",
+            "UpstreamHttpMethod": [ "GET" ]
+        },
+        {
+            "ReRoutesCaseSensitive": false,
+            "DownstreamPathTemplate": "/api/Person/GetPersonByBloodGroup/{BloodGroup}", //api url actual
+            "DownstreamScheme": "https",
+
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 7216
+                }
+            ],
+            "UpstreamPathTemplate": "/gateway/Person/GetPersonByBloodGroup/{BloodGroup}",
+            "UpstreamHttpMethod": [ "GET" ]
+        },
+        //----------
+        {
+            "ReRoutesCaseSensitive": false,
+            "DownstreamPathTemplate": "/api/Person/AddPerson", //api url actual
+            "DownstreamScheme": "https",
+
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 7216
+                }
+            ],
+            "UpstreamPathTemplate": "/gateway/Person/AddPerson",
+            "UpstreamHttpMethod": [ "POST" ]
+        },
+        {
+            "ReRoutesCaseSensitive": false,
+            "DownstreamPathTemplate": "/api/Person/UpdatePerson/{Id}", //api url actual
+            "DownstreamScheme": "https",
+
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 7216
+                }
+            ],
+            "UpstreamPathTemplate": "/gateway/Person/UpdatePerson/{Id}",
+            "UpstreamHttpMethod": [ "PUT" ]
+        },
+        {
+            "ReRoutesCaseSensitive": false,
+            "DownstreamPathTemplate": "/api/Person/DeletePerson/{Id}", //api url actual
+            "DownstreamScheme": "https",
+
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 7216
+                }
+            ],
+            "UpstreamPathTemplate": "/gateway/Person/DeletePerson/{Id}",
+            "UpstreamHttpMethod": [ "DELETE" ]
+        },
+
+        //----Donor-------------------------------------------------------------------------------------------
+        {
+            "ReRoutesCaseSensitive": false,
+            "DownstreamPathTemplate": "/api/Donation/GetAllDonors", //api url actual
+            "DownstreamScheme": "https",
+
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 7216
+                }
+            ],
+            "UpstreamPathTemplate": "/gateway/Donation/GetAllDonors",
+            "UpstreamHttpMethod": [ "GET" ]
+        },
+        {
+            "ReRoutesCaseSensitive": false,
+            "DownstreamPathTemplate": "/api/Donation/GetDonorById/{Id}", //api url actual
+            "DownstreamScheme": "https",
+
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 7216
+                }
+            ],
+            "UpstreamPathTemplate": "/gateway/Donation/GetDonorById/{Id}",
+            "UpstreamHttpMethod": [ "GET" ]
+        },
+        //----------
+        {
+            "ReRoutesCaseSensitive": false,
+            "DownstreamPathTemplate": "/api/Donation/AddDonor", //api url actual
+            "DownstreamScheme": "https",
+
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 7216
+                }
+            ],
+            "UpstreamPathTemplate": "/gateway/Donation/AddDonor",
+            "UpstreamHttpMethod": [ "POST" ]
+        },
+        {
+            "ReRoutesCaseSensitive": false,
+            "DownstreamPathTemplate": "/api/Donation/UpdateDonor/{Id}", //api url actual
+            "DownstreamScheme": "https",
+
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 7216
+                }
+            ],
+            "UpstreamPathTemplate": "/gateway/Donation/UpdateDonor/{Id}",
+            "UpstreamHttpMethod": [ "PUT" ]
+        },
+        {
+            "ReRoutesCaseSensitive": false,
+            "DownstreamPathTemplate": "/api/Donation/DeleteDonor/{Id}", //api url actual
+            "DownstreamScheme": "https",
+
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 7216
+                }
+            ],
+            "UpstreamPathTemplate": "/gateway/Donation/DeleteDonor/{Id}",
+            "UpstreamHttpMethod": [ "DELETE" ]
+        },
+
+        //----Receiver-------------------------------------------------------------------------------------------
+        {
+            "ReRoutesCaseSensitive": false,
+            "DownstreamPathTemplate": "/api/Receiver/GetAllReceivers", //api url actual
+            "DownstreamScheme": "https",
+
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 7216
+                }
+            ],
+            "UpstreamPathTemplate": "/gateway/Receiver/GetAllReceivers",
+            "UpstreamHttpMethod": [ "GET" ]
+        },
+        {
+            "ReRoutesCaseSensitive": false,
+            "DownstreamPathTemplate": "/api/Receiver/GetReceiverById/{Id}", //api url actual
+            "DownstreamScheme": "https",
+
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 7216
+                }
+            ],
+            "UpstreamPathTemplate": "/gateway/Receiver/GetReceiverById/{Id}",
+            "UpstreamHttpMethod": [ "GET" ]
+        },
+        //----------
+        {
+            "ReRoutesCaseSensitive": false,
+            "DownstreamPathTemplate": "/api/Receiver/AddReceiver", //api url actual
+            "DownstreamScheme": "https",
+
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 7216
+                }
+            ],
+            "UpstreamPathTemplate": "/gateway/Receiver/AddReceiver",
+            "UpstreamHttpMethod": [ "POST" ]
+        },
+        {
+            "ReRoutesCaseSensitive": false,
+            "DownstreamPathTemplate": "/api/Receiver/UpdateReceiver/{Id}", //api url actual
+            "DownstreamScheme": "https",
+
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 7216
+                }
+            ],
+            "UpstreamPathTemplate": "/gateway/Receiver/UpdateReceiver/{Id}",
+            "UpstreamHttpMethod": [ "PUT" ]
+        },
+        {
+            "ReRoutesCaseSensitive": false,
+            "DownstreamPathTemplate": "/api/Receiver/DeleteReceiver/{Id}", //api url actual
+            "DownstreamScheme": "https",
+
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 7216
+                }
+            ],
+            "UpstreamPathTemplate": "/gateway/Receiver/DeleteReceiver/{Id}",
+            "UpstreamHttpMethod": [ "DELETE" ]
+        },
+
+        //----Stock-------------------------------------------------------------------------------------------
+        {
+            "ReRoutesCaseSensitive": false,
+            "DownstreamPathTemplate": "/api/Stock/GetAllStocks", //api url actual
+            "DownstreamScheme": "https",
+
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 7216
+                }
+            ],
+            "UpstreamPathTemplate": "/gateway/Stock/GetAllStocks",
+            "UpstreamHttpMethod": [ "GET" ]
+        },
+        {
+            "ReRoutesCaseSensitive": false,
+            "DownstreamPathTemplate": "/api/Stock/GetStockByBloodGroup/{bloodGroup}", //api url actual
+            "DownstreamScheme": "https",
+
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 7216
+                }
+            ],
+            "UpstreamPathTemplate": "/gateway/Stock/GetStockByBloodGroup/{bloodGroup}",
+            "UpstreamHttpMethod": [ "GET" ]
+        },
+        //----------
+        {
+            "ReRoutesCaseSensitive": false,
+            "DownstreamPathTemplate": "/api/Stock/CreateStock", //api url actual
+            "DownstreamScheme": "https",
+
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 7216
+                }
+            ],
+            "UpstreamPathTemplate": "/gateway/Stock/CreateStock",
+            "UpstreamHttpMethod": [ "POST" ]
+        },
+        {
+            "ReRoutesCaseSensitive": false,
+            "DownstreamPathTemplate": "/api/Stock/UpdateStock/{bloodGroup}", //api url actual
+            "DownstreamScheme": "https",
+
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 7216
+                }
+            ],
+            "UpstreamPathTemplate": "/gateway/Stock/UpdateStock/{bloodGroup}",
+            "UpstreamHttpMethod": [ "PUT" ]
+        },
+        {
+            "ReRoutesCaseSensitive": false,
+            "DownstreamPathTemplate": "/api/Stock/DeleteStock/{bloodGroup}", //api url actual
+            "DownstreamScheme": "https",
+
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 7216
+                }
+            ],
+            "UpstreamPathTemplate": "/gateway/Stock/DeleteStock/{bloodGroup}",
+            "UpstreamHttpMethod": [ "DELETE" ]
+        }
+    ],
+    "GlobalConfiguration": {
+        "BaseUrl": "https://localhost:7190"
+        //https: //localhost:7190/gateway/GetAllPersons
+    }
+}
